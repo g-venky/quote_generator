@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote_Generator</title>
+</head>
+<body style="margin: 50px; border-color :solid aqua 2px">
+  
+    <H4 style="text-align: center;">Quote Of The Day</H4>
+    <div style="background-color: aqua; ">
+        <hr><br>
+            <i style="text-align: center;  " id ='demo'>“Money and success don’t change people; they merely amplify what is already there.” </i> <br>
+            <em style="float: right;  background-color: aqua;" id="demo2">— Will Smith</em><br><br>
+        <hr>
+    </div>
+    <div   style="text-align: center;" >
+        <button  onclick="quote()" type="button" class="button" >Show Another</button>
+    </div>   
+        <small style="float: right;">Quotes will refresh automatically after 15 seconds </small>
+    <!--<p id="demo"></p>-->
+    
+    <script>
+        function quote()
+        {
+
+            var quotes = [
+
+                {
+                    q: 'Your time is limited, so don’t waste it living someone else’s life. Don’t be trapped by dogma – which is living with the results of other people’s thinking.',
+                    a:  '– Steve Jobs'
+                },
+                {
+                    q: 'Never let the fear of striking out keep you from playing the game.',
+                    a: '– Babe Ruth'
+                },
+                {
+                    q: 'If you want to live a happy life, tie it to a goal, not to people or things.',
+                    a:'– Albert Einstein'
+                },
+                {
+                    q: 'Not how long, but how well you have lived is the main thing.',
+                    a:'— Seneca'
+                },
+                {
+                    q:'If life were predictable it would cease to be life, and be without flavor.',
+                    a: ' – Eleanor Roosevelt'
+                },
+                {
+                    q:'The whole secret of a successful life is to find out what is one’s destiny to do, and then do it.',
+                    a:'– Henry Ford'
+                },
+                {
+                    q:'In order to write about life first you must live it.',
+                    a:'– Ernest Hemingway'
+                },
+                {
+                    q:'The big lesson in life, baby, is never be scared of anyone or anything.',
+                    a:'– Frank Sinatra',
+                },
+                {
+                    q:'Sing like no one’s listening, love like you’ve never been hurt, dance like nobody’s watching, and live like it’s heaven on earth.',
+                    a:'– (Attributed to various sources)'
+                },
+                {
+                    q:'Curiosity about life in all of its aspects, I think, is still the secret of great creative people.',
+                    a:'– Leo Burnett'
+                },
+                {
+                    q:'Life is not a problem to be solved, but a reality to be experienced.',
+                    a:'– Soren Kierkegaard'
+                }
+
+             ]    
+            document.getElementById('demo').innerHTML=quotes[Math.floor(Math.random()*(quotes.length))].q;
+            document.getElementById('demo2').innerHTML=quotes[Math.floor(Math.random()*(quotes.length))].a;
+
+
+        }
+        window.setInterval(function(){
+            quote();
+        }, 15000);
+    </script>
+</body>
+</html>
